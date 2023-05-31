@@ -1,11 +1,10 @@
 from webscraper.constants import *
 from webscraper.utils.common import read_yaml, create_directories
-from webscraper.entity import (DataIngestionConfig)
-'''
+from webscraper.entity import (DataIngestionConfig,
                                DataValidationConfig,
                                DataTransformationConfig,
                                ModelTrainerConfig,
-                               ModelEvaluationConfig)'''
+                               ModelEvaluationConfig)
 
 
 class ConfigurationManager:
@@ -36,7 +35,7 @@ class ConfigurationManager:
         return data_ingestion_config
     
 
-'''
+
     def get_data_validation_config(self) -> DataValidationConfig:
         config = self.config.data_validation
 
@@ -50,6 +49,7 @@ class ConfigurationManager:
 
         return data_validation_config
     
+
 
     def get_data_transformation_config(self) -> DataTransformationConfig:
         config = self.config.data_transformation
@@ -104,4 +104,4 @@ class ConfigurationManager:
            
         )
 
-        return model_evaluation_config'''
+        return model_evaluation_config
